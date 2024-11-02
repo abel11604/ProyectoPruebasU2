@@ -2,6 +2,24 @@
 Library           SeleniumLibrary
 
 *** Keywords ***
+
+#2. checkboxes
+Abrir pagina Checkboxes
+    Open Browser    ${checkboxes_url}    chrome
+    Maximize Browser Window
+
+Esperar checkbox
+    wait until element is enabled      ${checkbox1}
+    sleep    1s
+#2. checkboxes
+Abrir pagina context
+    Open Browser    ${context_url}  chrome
+    Maximize Browser Window
+
+Esperar hot-pot
+    wait until element is enabled     ${hot-pot}
+    sleep    1s
+
 # 7. Controles Dinámicos
 Abrir página Controles Dinámicos
     Open Browser    ${URL}    chrome

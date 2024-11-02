@@ -6,6 +6,26 @@ Library           SeleniumLibrary
 Test Teardown   close browser
 
 *** Test Cases ***
+
+Case 2 Checkboxes
+    Abrir pagina Checkboxes
+    Esperar checkbox
+    click element    ${checkbox1}
+    Checkbox Should Be Selected    ${checkbox1}
+    click element   ${checkbox2}
+    sleep    1s
+    click element   ${checkbox2}
+    sleep    1s
+    Checkbox Should Be Selected      ${checkbox2}
+    sleep    1s
+Case 3 Context Menu
+    Abrir pagina context
+    Esperar hot-pot
+    Open Context Menu   ${hot-pot}
+    sleep    1s
+    Alert Should Be Present    You selected a context menu
+    sleep    1s
+
 Case 7 Controles Dinámicos
     Abrir página Controles Dinámicos
     sleep   2s
