@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-11-01T21:47:36.851234" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\adria\OneDrive\Documentos\GitHub\ProyectoPruebasU2\ProyectoPruebasU2\proyectoU2Pruebas\Test\test.robot">
+<test id="s1-t1" name="Case 7 Controles Dinámicos" line="8">
+<kw name="Abrir pagina">
+<msg time="2024-11-01T21:47:37.088615" level="FAIL">No keyword with name 'Abrir pagina' found.</msg>
+<status status="FAIL" start="2024-11-01T21:47:37.088615" elapsed="0.000000">No keyword with name 'Abrir pagina' found.</status>
+</kw>
+<kw name="sleep 2s">
+<status status="NOT RUN" start="2024-11-01T21:47:37.088615" elapsed="0.000000"/>
+</kw>
+<kw name="Clic en el boton Remove">
+<status status="NOT RUN" start="2024-11-01T21:47:37.089612" elapsed="0.000000"/>
+</kw>
+<kw name="sleep 2s">
+<status status="NOT RUN" start="2024-11-01T21:47:37.089612" elapsed="0.000000"/>
+</kw>
+<kw name="Validar checkbox no visible">
+<status status="NOT RUN" start="2024-11-01T21:47:37.089612" elapsed="0.000000"/>
+</kw>
+<kw name="sleep 2s">
+<status status="NOT RUN" start="2024-11-01T21:47:37.090646" elapsed="0.000000"/>
+</kw>
+<kw name="Clic en el boton Enable">
+<status status="NOT RUN" start="2024-11-01T21:47:37.090646" elapsed="0.000000"/>
+</kw>
+<kw name="sleep 2s">
+<status status="NOT RUN" start="2024-11-01T21:47:37.091606" elapsed="0.000000"/>
+</kw>
+<kw name="Validar campo de entrada habilitado">
+<status status="NOT RUN" start="2024-11-01T21:47:37.091606" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-11-01T21:47:37.085770" elapsed="0.006838">No keyword with name 'Abrir pagina' found.</status>
+</test>
+<status status="FAIL" start="2024-11-01T21:47:36.853201" elapsed="0.239905"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-01T21:47:36.896443" level="ERROR">Error in file 'C:\Users\adria\OneDrive\Documentos\GitHub\ProyectoPruebasU2\ProyectoPruebasU2\proyectoU2Pruebas\Test\test.robot' on line 3: Resource file '..\..\Datos\Variables.robot' does not exist.</msg>
+<msg time="2024-11-01T21:47:36.896981" level="ERROR">Error in file 'C:\Users\adria\OneDrive\Documentos\GitHub\ProyectoPruebasU2\ProyectoPruebasU2\proyectoU2Pruebas\Test\test.robot' on line 4: Resource file '..\..\Recursos\keywords.robot' does not exist.</msg>
+</errors>
+</robot>
