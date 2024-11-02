@@ -11,6 +11,8 @@ ${context_url}  https://the-internet.herokuapp.com/context_menu
 #5 Elementos que desaparecen
 ${disappearing_elements_url}    https://the-internet.herokuapp.com/disappearing_elements
 ${boton_gallery}                xpath://a[text()='Gallery']
+${boton_visible} =    ${False}
+${boton_visible}=    ${True}
 
 #6 Drag and drop
 ${drag_and_drop_url}    https://the-internet.herokuapp.com/drag_and_drop

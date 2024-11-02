@@ -28,15 +28,17 @@ Case 3 Context Menu
 
 Case 5 Elemento que desaparece
     Abrir pagina elementos que desaparecen
-     :FOR    ${i}    IN RANGE    1    10
-    Run Keyword And Ignore Error    Element Should Be Visible    ${boton_gallery}
-    sleep   1s
+    WHILE    ${boton_visible} == False
+        Reload Page
+        Sleep    1s
+        ${boton_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${boton_gallery}
+    END
     Element Should Be Visible    ${boton_gallery}
-    sleep   2s
-    :FOR    ${i}    IN RANGE    1    10
-    Reload Page
-    sleep   1s
-    Run Keyword And Ignore Error    Element Should Not Be Visible    ${boton_gallery}
+    WHILE    ${boton_visible} == True
+        Reload Page
+        Sleep    1s
+        ${boton_visible}=    Run Keyword And Return Status    Element Should Be Visible    ${boton_gallery}
+    END
     Element Should Not Be Visible    ${boton_gallery}
 
 Case 6 Drag and Drop

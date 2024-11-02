@@ -1,163 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.7 on win32)" generated="2024-11-01T22:03:55.406953" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\adria\OneDrive\Documentos\GitHub\ProyectoPruebasU2\ProyectoPruebasU2\proyectoU2Pruebas\Test\test.robot">
-<test id="s1-t1" name="Case 7 Controles Dinámicos" line="9">
-<kw name="Abrir página Controles Dinámicos" owner="keywords">
+<robot generator="Robot 7.1 (Python 3.13.0 on darwin)" generated="2024-11-02T15:01:49.297289" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/esmeraldamolinaestrada/Documents/ProyectoPruebas/ProyectoPruebasU2/proyectoU2Pruebas/Test/test.robot">
+<test id="s1-t1" name="Case 6 Drag and Drop" line="44">
+<kw name="Abrir pagina Drag and drop" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:03:55.613364" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dynamic_controls'.</msg>
-<msg time="2024-11-01T22:03:56.241677" level="WARN">The chromedriver version (129.0.6668.89) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${URL}</arg>
+<msg time="2024-11-02T15:01:49.392390" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/drag_and_drop'.</msg>
+<arg>${drag_and_drop_url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-01T22:03:55.613364" elapsed="3.382922"/>
+<status status="PASS" start="2024-11-02T15:01:49.392285" elapsed="3.922138"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-01T22:03:58.996286" elapsed="0.035655"/>
+<status status="PASS" start="2024-11-02T15:01:53.315544" elapsed="0.321225"/>
 </kw>
-<status status="PASS" start="2024-11-01T22:03:55.612367" elapsed="3.420896"/>
+<status status="PASS" start="2024-11-02T15:01:49.391943" elapsed="4.245015"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:01.034852" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-02T15:01:55.638470" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:03:59.033263" elapsed="2.001589"/>
+<status status="PASS" start="2024-11-02T15:01:53.637289" elapsed="2.001665"/>
 </kw>
-<kw name="Clic en el botón Remove" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:01.036918" level="INFO">Clicking button 'css:button[onclick="swapCheckbox()"]'.</msg>
-<arg>${REMOVE_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-01T22:04:01.035939" elapsed="0.138494"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:01.034852" elapsed="0.140079"/>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>${caja_a}</arg>
+<arg>${caja_b}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2024-11-02T15:01:55.639972" elapsed="0.594099"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:08.176227" level="INFO">Slept 7 seconds.</msg>
-<arg>7s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:04:01.175538" elapsed="7.000689"/>
-</kw>
-<kw name="Validar checkbox no visible" owner="keywords">
-<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:08.194176" level="INFO">Element 'checkbox' did not exist.</msg>
-<arg>${CHECKBOX_ID}</arg>
-<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2024-11-01T22:04:08.177403" elapsed="0.016773"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:08.176867" elapsed="0.017309"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:10.195885" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-02T15:01:58.234695" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:04:08.195121" elapsed="2.000764"/>
+<status status="PASS" start="2024-11-02T15:01:56.234228" elapsed="2.000912"/>
 </kw>
-<kw name="Clic en el botón Enable" owner="keywords">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:10.197914" level="INFO">Clicking button 'css:button[onclick="swapInput()"]'.</msg>
-<arg>${ENABLE_BTN}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-01T22:04:10.196880" elapsed="0.101035"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-02T15:01:58.236791" level="INFO">Verifying element 'id=column-a' contains exact text 'B'.</msg>
+<arg>${caja_a}</arg>
+<arg>B</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-02T15:01:58.235965" elapsed="0.029957"/>
 </kw>
-<status status="PASS" start="2024-11-01T22:04:10.196880" elapsed="0.101035"/>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-02T15:01:58.266450" level="INFO">Verifying element 'id=column-b' contains exact text 'A'.</msg>
+<arg>${caja_b}</arg>
+<arg>A</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-02T15:01:58.266192" elapsed="0.012142"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:17.299764" level="INFO">Slept 7 seconds.</msg>
-<arg>7s</arg>
+<msg time="2024-11-02T15:02:00.279769" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:04:10.298912" elapsed="7.000852"/>
+<status status="PASS" start="2024-11-02T15:01:58.278545" elapsed="2.001699"/>
 </kw>
-<kw name="Validar campo de entrada habilitado" owner="keywords">
-<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
-<arg>${INPUT_FIELD}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-11-01T22:04:17.301383" elapsed="0.057284"/>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>${caja_b}</arg>
+<arg>${caja_a}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2024-11-02T15:02:00.281054" elapsed="0.551817"/>
 </kw>
-<status status="PASS" start="2024-11-01T22:04:17.300380" elapsed="0.058287"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-02T15:02:02.834705" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-02T15:02:00.833316" elapsed="2.001789"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-02T15:02:02.836788" level="INFO">Verifying element 'id=column-a' contains exact text 'A'.</msg>
+<arg>${caja_a}</arg>
+<arg>A</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-02T15:02:02.835991" elapsed="0.022965"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-02T15:02:02.859518" level="INFO">Verifying element 'id=column-b' contains exact text 'B'.</msg>
+<arg>${caja_b}</arg>
+<arg>B</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-02T15:02:02.859237" elapsed="0.016817"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-01T22:04:17.359887" elapsed="2.254751"/>
+<status status="PASS" start="2024-11-02T15:02:02.876287" elapsed="0.090086"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-01T22:04:19.614638" elapsed="0.001033"/>
+<status status="PASS" start="2024-11-02T15:02:02.966642" elapsed="0.000091"/>
 </kw>
-<status status="PASS" start="2024-11-01T22:03:55.612367" elapsed="24.003304"/>
+<status status="PASS" start="2024-11-02T15:01:49.391636" elapsed="13.575147"/>
 </test>
-<test id="s1-t2" name="Case 8 Menú Flotante" line="21">
-<kw name="Abrir página Menú Flotante" owner="keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:19.618627" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/floating_menu'.</msg>
-<msg time="2024-11-01T22:04:20.215287" level="WARN">The chromedriver version (129.0.6668.89) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${MENU_URL}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-01T22:04:19.618627" elapsed="3.159653"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-01T22:04:22.778775" elapsed="0.039803"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:19.617627" elapsed="3.201948"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:24.820767" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:04:22.820573" elapsed="2.000194"/>
-</kw>
-<kw name="Desplazar al fondo" owner="keywords">
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:24.822378" level="INFO">Executing JavaScript:
-window.scrollTo(0, document.body.scrollHeight);
-Without any arguments.</msg>
-<arg>window.scrollTo(0, document.body.scrollHeight);</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-11-01T22:04:24.821374" elapsed="0.018654"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:24.821374" elapsed="0.018654"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-01T22:04:27.842054" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-01T22:04:24.841027" elapsed="3.001027"/>
-</kw>
-<kw name="Validar opciones visibles" owner="keywords">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-11-01T22:04:27.887114" level="INFO">Element 'css:.example #menu a' is displayed.</msg>
-<arg>${MENU_ITEM}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-01T22:04:27.843725" elapsed="0.043389"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:27.842660" elapsed="0.044454"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-01T22:04:27.888081" elapsed="2.243895"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-01T22:04:30.133019" elapsed="0.000994"/>
-</kw>
-<status status="PASS" start="2024-11-01T22:04:19.617627" elapsed="10.516386"/>
-</test>
-<status status="PASS" start="2024-11-01T22:03:55.408944" elapsed="34.726026"/>
+<status status="PASS" start="2024-11-02T15:01:49.298235" elapsed="13.668901"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-01T22:03:56.241677" level="WARN">The chromedriver version (129.0.6668.89) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2024-11-01T22:04:20.215287" level="WARN">The chromedriver version (129.0.6668.89) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
