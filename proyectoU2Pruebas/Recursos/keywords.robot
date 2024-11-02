@@ -37,6 +37,15 @@ Clic en el botón Enable
 Validar campo de entrada habilitado
     Element Should Be Enabled    ${INPUT_FIELD}
 
+# 5. Elementos que desaparecen
+Abrir pagina elementos que desaparecen
+    open browser    ${disappearing_elements_url}    chrome
+    maximize browser window
+
+#6. Drag and drop
+Abrir pagina Drag and drop
+    open browser    ${drag_and_drop_url}    chrome
+    maximize browser window
 
 # 8. Menú Flotante
 Abrir página Menú Flotante

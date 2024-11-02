@@ -26,6 +26,33 @@ Case 3 Context Menu
     Alert Should Be Present    You selected a context menu
     sleep    1s
 
+Case 5 Elemento que desaparece
+    Abrir pagina elementos que desaparecen
+     :FOR    ${i}    IN RANGE    1    10
+    Run Keyword And Ignore Error    Element Should Be Visible    ${boton_gallery}
+    sleep   1s
+    Element Should Be Visible    ${boton_gallery}
+    sleep   2s
+    :FOR    ${i}    IN RANGE    1    10
+    Reload Page
+    sleep   1s
+    Run Keyword And Ignore Error    Element Should Not Be Visible    ${boton_gallery}
+    Element Should Not Be Visible    ${boton_gallery}
+
+Case 6 Drag and Drop
+    Abrir pagina Drag and drop
+    sleep   2s
+    Drag And Drop    ${caja_a}    ${caja_b}
+    sleep   2s
+    Element Text Should Be    ${caja_a}    B
+    Element Text Should Be    ${caja_b}    A
+    sleep   2s
+    Drag And Drop    ${caja_b}    ${caja_a}
+    sleep   2s
+    Element Text Should Be    ${caja_a}    A
+    Element Text Should Be    ${caja_b}    B
+    close browser
+
 Case 7 Controles Dinámicos
     Abrir página Controles Dinámicos
     sleep   2s
