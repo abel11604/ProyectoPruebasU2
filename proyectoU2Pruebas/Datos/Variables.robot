@@ -1,10 +1,23 @@
 *** Variables ***
-#2.checkboxes
+#1 Quitar/Agregar elementos
+${caso1_url}    https://the-internet.herokuapp.com/add_remove_elements/
+${add_button}   xpath://div[@class='example']/button
+${added_button}     xpath://div[@id='elements']/button[@class='added-manually']
+
+#2 iniciar sesion
+${caso2_url}    https://the-internet.herokuapp.com/basic_auth
+${user_valido}  admin
+${user_valido}    admin
+${user_invalido}  admin1
+${user_invalido}    admin1
+
+
+#3.checkboxes
 ${checkbox1}    xpath://div[@class='example']//form[@id='checkboxes']//input[1]
 ${checkbox2}    xpath://div[@class='example']//form[@id='checkboxes']//input[2]
 ${checkboxes_url}   https://the-internet.herokuapp.com/checkboxes
 
-#3.Context Menu
+#4.Context Menu
 ${hot-pot}    id=hot-spot
 ${context_url}  https://the-internet.herokuapp.com/context_menu
 

@@ -1,107 +1,1296 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.13.0 on darwin)" generated="2024-11-02T15:01:49.297289" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="/Users/esmeraldamolinaestrada/Documents/ProyectoPruebas/ProyectoPruebasU2/proyectoU2Pruebas/Test/test.robot">
-<test id="s1-t1" name="Case 6 Drag and Drop" line="44">
-<kw name="Abrir pagina Drag and drop" owner="keywords">
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-11-03T02:03:22.426123" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\abelc\OneDrive\Documentos\GitHub\ProyectoPruebasU2\proyectoU2Pruebas\Test\test.robot">
+<test id="s1-t1" name="Case 1 Agregar/Quitar elementos" line="9">
+<kw name="Abrir pagina elementos" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-02T15:01:49.392390" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/drag_and_drop'.</msg>
-<arg>${drag_and_drop_url}</arg>
+<msg time="2024-11-03T02:03:22.852346" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<arg>${caso1_url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-02T15:01:49.392285" elapsed="3.922138"/>
+<status status="PASS" start="2024-11-03T02:03:22.851961" elapsed="5.522363"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-02T15:01:53.315544" elapsed="0.321225"/>
+<status status="PASS" start="2024-11-03T02:03:28.375157" elapsed="0.048937"/>
 </kw>
-<status status="PASS" start="2024-11-02T15:01:49.391943" elapsed="4.245015"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-02T15:01:55.638470" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-02T15:01:53.637289" elapsed="2.001665"/>
-</kw>
-<kw name="Drag And Drop" owner="SeleniumLibrary">
-<arg>${caja_a}</arg>
-<arg>${caja_b}</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2024-11-02T15:01:55.639972" elapsed="0.594099"/>
+<status status="PASS" start="2024-11-03T02:03:22.850851" elapsed="5.573462"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-02T15:01:58.234695" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-11-03T02:03:29.427131" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-02T15:01:56.234228" elapsed="2.000912"/>
+<status status="PASS" start="2024-11-03T02:03:28.424872" elapsed="1.002471"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-02T15:01:58.236791" level="INFO">Verifying element 'id=column-a' contains exact text 'B'.</msg>
-<arg>${caja_a}</arg>
-<arg>B</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-11-02T15:01:58.235965" elapsed="0.029957"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-02T15:01:58.266450" level="INFO">Verifying element 'id=column-b' contains exact text 'A'.</msg>
-<arg>${caja_b}</arg>
-<arg>A</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-11-02T15:01:58.266192" elapsed="0.012142"/>
+<kw name="Dar click" owner="keywords">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:29.431756" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:29.430230" elapsed="0.102620"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-02T15:02:00.279769" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-11-03T02:03:30.034647" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-02T15:01:58.278545" elapsed="2.001699"/>
+<status status="PASS" start="2024-11-03T02:03:29.533358" elapsed="0.501567"/>
 </kw>
-<kw name="Drag And Drop" owner="SeleniumLibrary">
-<arg>${caja_b}</arg>
-<arg>${caja_a}</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" start="2024-11-02T15:02:00.281054" elapsed="0.551817"/>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-11-03T02:03:29.429911" elapsed="0.605244"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:30.036579" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:30.035991" elapsed="0.069717"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-02T15:02:02.834705" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
+<msg time="2024-11-03T02:03:30.607425" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-02T15:02:00.833316" elapsed="2.001789"/>
+<status status="PASS" start="2024-11-03T02:03:30.106296" elapsed="0.501290"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-02T15:02:02.836788" level="INFO">Verifying element 'id=column-a' contains exact text 'A'.</msg>
-<arg>${caja_a}</arg>
-<arg>A</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-11-02T15:02:02.835991" elapsed="0.022965"/>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-03T02:03:30.035614" elapsed="0.572082"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:30.608486" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:30.608143" elapsed="0.055945"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-02T15:02:02.859518" level="INFO">Verifying element 'id=column-b' contains exact text 'B'.</msg>
-<arg>${caja_b}</arg>
-<arg>B</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-11-02T15:02:02.859237" elapsed="0.016817"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:31.165073" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:30.664434" elapsed="0.500888"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-02T15:02:02.876287" elapsed="0.090086"/>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-03T02:03:30.607957" elapsed="0.557536"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:31.166691" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:31.166261" elapsed="0.080403"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:31.747551" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:31.246962" elapsed="0.500829"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-11-03T02:03:31.165913" elapsed="0.582066"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:31.749316" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:31.748805" elapsed="0.082458"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:32.332351" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:31.831600" elapsed="0.500996"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-11-03T02:03:31.748341" elapsed="0.584465"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:32.334066" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:32.333589" elapsed="0.091686"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:32.926633" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:32.425839" elapsed="0.501032"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-11-03T02:03:32.333284" elapsed="0.593781"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:32.928275" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:32.927797" elapsed="0.078251"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:33.507042" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:33.006383" elapsed="0.500924"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-11-03T02:03:32.927468" elapsed="0.580021"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:33.508673" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:33.508204" elapsed="0.078568"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:34.087726" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:33.587137" elapsed="0.500817"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2024-11-03T02:03:33.507898" elapsed="0.580238"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:34.089303" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:34.088849" elapsed="0.074516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:34.664850" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:34.163754" elapsed="0.501410"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2024-11-03T02:03:34.088519" elapsed="0.576857"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:34.666654" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:34.666144" elapsed="0.075746"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:35.244453" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:34.742350" elapsed="0.502339"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2024-11-03T02:03:34.665828" elapsed="0.579027"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:35.245998" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:35.245544" elapsed="0.070556"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:35.817624" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:35.316664" elapsed="0.501206"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2024-11-03T02:03:35.245206" elapsed="0.572839"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:35.819278" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:35.818768" elapsed="0.075412"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:36.395707" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:35.894570" elapsed="0.501355"/>
+</kw>
+<var name="${i}">11</var>
+<status status="PASS" start="2024-11-03T02:03:35.818403" elapsed="0.577722"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:36.397239" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:36.396797" elapsed="0.085933"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:36.983744" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:36.483211" elapsed="0.500720"/>
+</kw>
+<var name="${i}">12</var>
+<status status="PASS" start="2024-11-03T02:03:36.396527" elapsed="0.587515"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:36.985376" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:36.984485" elapsed="0.065320"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:37.551116" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:37.050225" elapsed="0.501076"/>
+</kw>
+<var name="${i}">13</var>
+<status status="PASS" start="2024-11-03T02:03:36.984279" elapsed="0.567129"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:37.552264" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:37.551882" elapsed="0.072868"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:38.125430" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:37.624991" elapsed="0.500600"/>
+</kw>
+<var name="${i}">14</var>
+<status status="PASS" start="2024-11-03T02:03:37.551682" elapsed="0.574022"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:38.126593" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:38.126176" elapsed="0.070337"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:38.697717" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:38.196903" elapsed="0.500983"/>
+</kw>
+<var name="${i}">15</var>
+<status status="PASS" start="2024-11-03T02:03:38.125991" elapsed="0.572011"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:38.698895" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:38.698449" elapsed="0.104707"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:39.304056" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:38.803425" elapsed="0.500971"/>
+</kw>
+<var name="${i}">16</var>
+<status status="PASS" start="2024-11-03T02:03:38.698263" elapsed="0.606362"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:39.306086" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:39.305485" elapsed="0.100006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:39.906848" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:39.405783" elapsed="0.501358"/>
+</kw>
+<var name="${i}">17</var>
+<status status="PASS" start="2024-11-03T02:03:39.305099" elapsed="0.602254"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:39.908824" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:39.908195" elapsed="0.078751"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:40.488245" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:39.987222" elapsed="0.501259"/>
+</kw>
+<var name="${i}">18</var>
+<status status="PASS" start="2024-11-03T02:03:39.907816" elapsed="0.580819"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:40.489933" level="INFO">Clicking element 'xpath://div[@class='example']/button'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:40.489282" elapsed="0.089774"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:41.080166" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:40.579402" elapsed="0.501100"/>
+</kw>
+<var name="${i}">19</var>
+<status status="PASS" start="2024-11-03T02:03:40.489029" elapsed="0.591599"/>
+</iter>
+<var>${i}</var>
+<value>${veces}</value>
+<status status="PASS" start="2024-11-03T02:03:29.429427" elapsed="11.651387"/>
+</for>
+<arg>20</arg>
+<arg>${add_button}</arg>
+<status status="PASS" start="2024-11-03T02:03:29.428442" elapsed="11.652569"/>
+</kw>
+<kw name="Verificar cantidad botones" owner="keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:41.109828" level="INFO">${Botones} = 20</msg>
+<var>${Botones}</var>
+<arg>${boton}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.085241" elapsed="0.024659"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-03T02:03:41.110711" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${Botones}</arg>
+<arg>${cantidad}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.110218" elapsed="0.000662"/>
+</kw>
+<arg>${added_button}</arg>
+<arg>20</arg>
+<status status="PASS" start="2024-11-03T02:03:41.084316" elapsed="0.026807"/>
+</kw>
+<kw name="Dar click" owner="keywords">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:41.113154" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.112750" elapsed="0.104366"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:41.718271" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.217407" elapsed="0.501127"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2024-11-03T02:03:41.112463" elapsed="0.606291"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:41.719931" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.719432" elapsed="0.074578"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:42.295575" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:41.794402" elapsed="0.501421"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-03T02:03:41.719120" elapsed="0.576877"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:42.297192" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:42.296719" elapsed="0.086948"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:42.885176" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:42.384332" elapsed="0.501103"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-03T02:03:42.296406" elapsed="0.589218"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:42.886860" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:42.886368" elapsed="0.077953"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:43.465252" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:42.964712" elapsed="0.500709"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-11-03T02:03:42.886032" elapsed="0.579501"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:43.466238" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:43.465940" elapsed="0.245494"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:44.212551" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:43.711701" elapsed="0.501059"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-11-03T02:03:43.465759" elapsed="0.747147"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:44.214050" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:44.213480" elapsed="0.081867"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:44.797050" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:44.296053" elapsed="0.501191"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-11-03T02:03:44.213196" elapsed="0.584182"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:44.798259" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:44.797875" elapsed="0.050249"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:45.349654" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:44.848356" elapsed="0.501583"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-11-03T02:03:44.797648" elapsed="0.552480"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:45.352171" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:45.351415" elapsed="0.077863"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:45.930532" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:45.429603" elapsed="0.501179"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2024-11-03T02:03:45.350887" elapsed="0.580090"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:45.932364" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:45.931790" elapsed="0.079031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:46.512748" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:46.011357" elapsed="0.501932"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2024-11-03T02:03:45.931355" elapsed="0.582180"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:46.515026" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:46.514475" elapsed="0.078508"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:47.094274" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:46.593373" elapsed="0.501346"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2024-11-03T02:03:46.514173" elapsed="0.580750"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:47.096157" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:47.095663" elapsed="0.075611"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:47.672936" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:47.171641" elapsed="0.501556"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2024-11-03T02:03:47.095343" elapsed="0.578044"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:47.675135" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:47.674407" elapsed="0.079119"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:48.255276" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:47.754133" elapsed="0.501482"/>
+</kw>
+<var name="${i}">11</var>
+<status status="PASS" start="2024-11-03T02:03:47.673826" elapsed="0.581985"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:48.257049" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:48.256578" elapsed="0.076650"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:48.834454" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:48.333761" elapsed="0.500950"/>
+</kw>
+<var name="${i}">12</var>
+<status status="PASS" start="2024-11-03T02:03:48.256299" elapsed="0.578630"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:48.836342" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:48.835701" elapsed="0.077087"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:49.415208" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:48.913155" elapsed="0.502310"/>
+</kw>
+<var name="${i}">13</var>
+<status status="PASS" start="2024-11-03T02:03:48.835347" elapsed="0.580301"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:49.416865" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:49.416384" elapsed="0.078754"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:49.996287" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:49.495540" elapsed="0.501009"/>
+</kw>
+<var name="${i}">14</var>
+<status status="PASS" start="2024-11-03T02:03:49.416063" elapsed="0.580701"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:49.997922" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:49.997458" elapsed="0.076335"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:50.574731" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:50.074235" elapsed="0.500819"/>
+</kw>
+<var name="${i}">15</var>
+<status status="PASS" start="2024-11-03T02:03:49.997152" elapsed="0.578145"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:50.576825" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:50.576190" elapsed="0.075095"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:51.152910" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:50.651791" elapsed="0.501406"/>
+</kw>
+<var name="${i}">16</var>
+<status status="PASS" start="2024-11-03T02:03:50.575797" elapsed="0.577590"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:51.154881" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:51.154353" elapsed="0.076197"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:51.731685" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:51.230881" elapsed="0.501107"/>
+</kw>
+<var name="${i}">17</var>
+<status status="PASS" start="2024-11-03T02:03:51.153824" elapsed="0.578352"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:51.733266" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:51.732853" elapsed="0.075893"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:52.310209" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:51.809070" elapsed="0.501379"/>
+</kw>
+<var name="${i}">18</var>
+<status status="PASS" start="2024-11-03T02:03:51.732566" elapsed="0.578056"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:52.313499" level="INFO">Clicking element 'xpath://div[@id='elements']/button[@class='added-manually']'.</msg>
+<arg>${clickear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:52.311533" elapsed="0.080273"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:52.893165" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:52.392272" elapsed="0.501149"/>
+</kw>
+<var name="${i}">19</var>
+<status status="PASS" start="2024-11-03T02:03:52.311018" elapsed="0.582600"/>
+</iter>
+<var>${i}</var>
+<value>${veces}</value>
+<status status="PASS" start="2024-11-03T02:03:41.112100" elapsed="11.781875"/>
+</for>
+<arg>20</arg>
+<arg>${added_button}</arg>
+<status status="PASS" start="2024-11-03T02:03:41.111612" elapsed="11.782831"/>
+</kw>
+<kw name="Verificar cantidad botones" owner="keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:52.914762" level="INFO">${Botones} = 0</msg>
+<var>${Botones}</var>
+<arg>${boton}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T02:03:52.896109" elapsed="0.018753"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-03T02:03:52.915770" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${Botones}</arg>
+<arg>${cantidad}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-03T02:03:52.915225" elapsed="0.000944"/>
+</kw>
+<arg>${added_button}</arg>
+<arg>0</arg>
+<status status="PASS" start="2024-11-03T02:03:52.895275" elapsed="0.022963"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:03:53.920217" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:03:52.919530" elapsed="1.001057"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-02T15:02:02.966642" elapsed="0.000091"/>
+<status status="PASS" start="2024-11-03T02:03:53.921778" elapsed="2.490010"/>
 </kw>
-<status status="PASS" start="2024-11-02T15:01:49.391636" elapsed="13.575147"/>
+<status status="PASS" start="2024-11-03T02:03:22.849831" elapsed="33.562566"/>
 </test>
-<status status="PASS" start="2024-11-02T15:01:49.298235" elapsed="13.668901"/>
-</suite>
-<statistics>
-<total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
-</suite>
-</statistics>
-<errors>
-</errors>
-</robot>
+<test id="s1-t2" name="Case 2 autentificacion" line="18">
+<kw name="Abrir pagina autentificacion" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:03:56.415968" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/basic_auth'.</msg>
+<arg>${caso2_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T02:03:56.415548" elapsed="4.083496"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T02:04:00.499372" elapsed="0.043194"/>
+</kw>
+<status status="PASS" start="2024-11-03T02:03:56.414810" elapsed="4.127986"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:04:02.544376" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:04:00.543289" elapsed="2.001356"/>
+</kw>
+<kw name="login pop up" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:02.547691" level="INFO">Executing JavaScript:
+window.location.href = 'https://admin1:admin1@the-internet.herokuapp.com/basic_auth'
+Without any arguments.</msg>
+<arg>window.location.href = 'https://${username}:${password}@the-internet.herokuapp.com/basic_auth'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-03T02:04:02.546635" elapsed="0.729678"/>
+</kw>
+<arg>${user_invalido}</arg>
+<arg>${user_invalido}</arg>
+<status status="PASS" start="2024-11-03T02:04:02.545592" elapsed="0.731232"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T02:04:05.281221" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T02:04:03.279510" elapsed="2.002034"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:10.462974" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-03T02:04:10.463358" level="FAIL">Element 'login_popup_selector' did not appear in 5 seconds.</msg>
+<arg>login_popup_selector</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-11-03T02:04:05.282384" elapsed="5.188561">Element 'login_popup_selector' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:10.475670" elapsed="0.000200"/>
+</kw>
+<kw name="login pop up" owner="keywords">
+<arg>${user_valido}</arg>
+<arg>${user_valido}</arg>
+<status status="NOT RUN" start="2024-11-03T02:04:10.476928" elapsed="0.000089"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:10.477698" elapsed="0.000090"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Basic Auth</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:10.478295" elapsed="0.000059"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:10.479295" elapsed="0.000222"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T02:04:10.480215" elapsed="2.706885"/>
+</kw>
+<status status="FAIL" start="2024-11-03T02:03:56.413710" elapsed="16.773930">Element 'login_popup_selector' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Case 3 Checkboxes" line="34">
+<kw name="Abrir pagina Checkboxes" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:13.191483" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<arg>${checkboxes_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T02:04:13.191041" elapsed="4.490413"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:17.801803" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<msg time="2024-11-03T02:04:17.814536" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2024-11-03T02:04:17.682024" elapsed="0.138782">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-11-03T02:04:13.190263" elapsed="4.631214">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<kw name="Esperar checkbox" owner="keywords">
+<status status="NOT RUN" start="2024-11-03T02:04:17.848455" elapsed="0.000162"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${checkbox1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.862696" elapsed="0.000077"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<arg>${checkbox1}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.867362" elapsed="0.000086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${checkbox2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.869203" elapsed="0.000081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.869674" elapsed="0.000068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${checkbox2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.870058" elapsed="0.000059"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.870422" elapsed="0.000053"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<arg>${checkbox2}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.871024" elapsed="0.000066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:17.878860" elapsed="0.000095"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T02:04:17.879617" elapsed="2.205889"/>
+</kw>
+<status status="FAIL" start="2024-11-03T02:04:13.189250" elapsed="6.896892">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</test>
+<test id="s1-t4" name="Case 4 Context Menu" line="45">
+<kw name="Abrir pagina context" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:20.093338" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/context_menu'.</msg>
+<arg>${context_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T02:04:20.091971" elapsed="3.489722"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:23.679260" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<msg time="2024-11-03T02:04:23.687820" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2024-11-03T02:04:23.582358" elapsed="0.109619">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-11-03T02:04:20.090746" elapsed="3.602058">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<kw name="Esperar hot-pot" owner="keywords">
+<status status="NOT RUN" start="2024-11-03T02:04:23.715862" elapsed="0.000103"/>
+</kw>
+<kw name="Open Context Menu" owner="SeleniumLibrary">
+<arg>${hot-pot}</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:23.716483" elapsed="0.000098"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:23.716919" elapsed="0.000054"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<arg>You selected a context menu</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:23.731784" elapsed="0.000314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T02:04:23.736529" elapsed="0.000092"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T02:04:23.738318" elapsed="2.288352"/>
+</kw>
+<status status="FAIL" start="2024-11-03T02:04:20.089128" elapsed="5.938102">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</test>
+<test id="s1-t5" name="Case 5 Elemento que desaparece" line="53">
+<kw name="Abrir pagina elementos que desaparecen" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:26.032095" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/disappearing_elements'.</msg>
+<arg>${disappearing_elements_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T02:04:26.031454" elapsed="5.078312"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-11-03T02:04:31.236118" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E7FA85]
+	(No symbol) [0x00007FF6E6F22AD7]
+	(No symbol) [0x00007FF6E6F3B1B1]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<msg time="2024-11-03T02:04:31.268515" level="FAIL">WebDriverException: Message: target frame detached: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E9535E]
+	(No symbol) [0x00007FF6E6E94156]
+	(No symbol) [0x00007FF6E6E939BD]
+	(No symbol) [0x00007FF6E6E938DA]
+	(No symbol) [0x00007FF6E6E9151E]
+	(No symbol) [0x00007FF6E6E91FCF]
+	(No symbol) [0x00007FF6E6EA08CE]
+	(No symbol) [0x00007FF6E6EB385D]
+	(No symbol) [0x00007FF6E6EB91FA]
+	(No symbol) [0x00007FF6E6E92734]
+	(No symbol) [0x00007FF6E6EB33DF]
+	(No symbol) [0x00007FF6E6F3B795]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="FAIL" start="2024-11-03T02:04:31.110145" elapsed="0.161801">WebDriverException: Message: target frame detached: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E9535E]
+	(No symbol) [0x00007FF6E6E94156]
+	(No symbol) [0x00007FF6E6E939BD]
+	(No symbol) [0x00007FF6E6E938DA]
+	(No symbol) [0x00007FF6E6E9151E]
+	(No symbol) [0x00007FF6E6E91FCF]
+	(No symbol) [0x00007FF6E6EA08CE]
+	(No symbol) [0x00007FF6E6EB385D]
+	(No symbol) [0x00007FF6E6EB91FA]
+	(No symbol) [0x00007FF6E6E92734]
+	(No symbol) [0x00007FF6E6EB33DF]
+	(No symbol) [0x00007FF6E6F3B795]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2024-11-03T02:04:26.030657" elapsed="5.251423">WebDriverException: Message: target frame detached: received Inspector.detached event
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=130.0.6723.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E70A3AF5+28005]
+	(No symbol) [0x00007FF6E70083F0]
+	(No symbol) [0x00007FF6E6EA580A]
+	(No symbol) [0x00007FF6E6E9535E]
+	(No symbol) [0x00007FF6E6E94156]
+	(No symbol) [0x00007FF6E6E939BD]
+	(No symbol) [0x00007FF6E6E938DA]
+	(No symbol) [0x00007FF6E6E9151E]
+	(No symbol) [0x00007FF6E6E91FCF]
+	(No symbol) [0x00007FF6E6EA08CE]
+	(No symbol) [0x00007FF6E6EB385D]
+	(No symbol) [0x00007FF6E6EB91FA]
+	(No symbol) [0x00007FF6E6E92734]
+	(No symbol) [0x00007FF6E6EB33DF]
+	(No symbol) [0x00007FF6E6F3B795]
+	(No symbol) [0x00007FF6E6F1B7E3]
+	(No symbol) [0x00007FF6E6EE75C8]
+	(No symbol) [0x00007FF6E6EE8731]
+	GetHandleVerifier [0x00007FF6E739646D+3118813]
+	GetHandleVerifier [0x00007FF6E73E6CC0+3448624]
+	GetHandleVerifier [0x00007FF6E73DCF3D+3408301]
+	GetHandleVerifier [0x00007FF6E716A44B+841403]
+	(No symbol) [0x00007FF6E701344F]
+	(No symbol) [0x00007FF6E700F4C4]
+	(No symbol) [0x00007FF6E700F65D]
+	(No symbol) [0x00007FF6E6FFEBB9]
+	BaseThreadInitThunk [0x00007FF9EEBD7374+20]
+	RtlUserThreadStart [0x00007FF9EEFFCC91+33]
+</status>
+</kw>
+<while condition="${boton_visible} == False">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">

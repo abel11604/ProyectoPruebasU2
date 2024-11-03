@@ -6,8 +6,30 @@ Library           SeleniumLibrary
 Test Teardown   close browser
 
 *** Test Cases ***
+Case 1 Agregar/Quitar elementos
+   Abrir pagina elementos
+    Sleep    1s
+    Dar click    20    ${add_button}
+    Verificar cantidad botones    ${added_button}    20
+    Dar click    20    ${added_button}
+    Verificar cantidad botones    ${added_button}    0
+    Sleep    1s
 
-Case 2 Checkboxes
+Case 2 autentificacion
+  Abrir pagina autentificacion
+    Sleep    2s
+
+    # Prueba con credenciales inválidas
+    Login pop up    ${user_invalido}    ${user_invalido}
+    Sleep    2s
+    # Prueba con credenciales válidas
+    Login pop up    ${user_valido}    ${user_valido}
+    Sleep    2s
+    Page Should Contain    Basic Auth
+
+    Close Browser
+
+Case 3 Checkboxes
     Abrir pagina Checkboxes
     Esperar checkbox
     click element    ${checkbox1}
@@ -18,7 +40,7 @@ Case 2 Checkboxes
     sleep    1s
     Checkbox Should Be Selected      ${checkbox2}
     sleep    1s
-Case 3 Context Menu
+Case 4 Context Menu
     Abrir pagina context
     Esperar hot-pot
     Open Context Menu   ${hot-pot}
