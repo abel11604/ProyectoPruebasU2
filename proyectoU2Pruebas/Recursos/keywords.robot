@@ -83,3 +83,30 @@ Desplazar al fondo
 
 Validar opciones visibles
     Element Should Be Visible    ${MENU_ITEM}
+
+# 9. Autenticacion con formulario
+Input Username and Password
+    [Arguments]    ${username}    ${password}
+    Input Text    id=username    ${username}
+    Input Text    id=password    ${password}
+    Click Button    xpath=//button[@type="submit"]
+
+Validate Login Success
+    Wait Until Element Contains    class:flash.success    ${LOGIN_SUCCESS_MESSAGE}
+
+Click Logout
+    Click Element    xpath=//a[@href='/logout']
+
+Validate Logout Success
+    Wait Until Element Contains    class:flash.success    You logged out of the secure area!
+
+Validate Error Message
+    [Arguments]    ${expected_message}
+    Wait Until Element Contains    class:flash.error    ${expected_message}
+
+# 10. Teclas presionadas
+
+Validate Key Press
+    [Arguments]    ${expected_message}
+    Wait Until Element Contains    id=result    ${expected_message}
+

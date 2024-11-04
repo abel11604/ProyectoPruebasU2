@@ -42,3 +42,18 @@ ${INPUT_FIELD}   css:input[type="text"]
 # 8. Menú Flotante
 ${MENU_URL}           https://the-internet.herokuapp.com/floating_menu
 ${MENU_ITEM}          css:.example #menu a
+
+# 9. Autenticación con Formulario
+${URL}     https://the-internet.herokuapp.com/login
+${USERNAME}     tomsmith
+${PASSWORD}     SuperSecretPassword!
+${INVALID_USERNAME}     tomsmith1
+${INVALID_PASSWORD}     SuperS1ecretPassword!
+${LOGIN_SUCCESS_MESSAGE}     You logged into a secure area!
+${USERNAME_ERROR_MESSAGE}    Your username is invalid!
+${PASSWORD_ERROR_MESSAGE}    Your password is invalid!
+
+# 10. Teclas Presionadas
+${URL}     https://the-internet.herokuapp.com/key_presses
+${ESCAPE_MESSAGE}     You entered: ESCAPE
+${SPACE_MESSAGE}      You entered: SPACE

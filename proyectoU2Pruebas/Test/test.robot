@@ -96,3 +96,38 @@ Case 8 Menú Flotante
     sleep    3s
     Validar opciones visibles
     close browser
+
+# 9. Autenticacion con formulario
+Successful Login and Logout
+    Open Browser    ${URL}    chrome
+    Input Username and Password    ${USERNAME}    ${PASSWORD}
+    Validate Login Success
+    Click Logout
+    Validate Logout Success
+    Close Browser
+
+Login with Invalid Username
+    Open Browser    ${URL}    chrome
+    Input Username and Password    ${INVALID_USERNAME}    ${PASSWORD}
+    Validate Error Message    ${USERNAME_ERROR_MESSAGE}
+    Close Browser
+
+Login with Invalid Password
+    Open Browser    ${URL}    chrome
+    Input Username and Password    ${USERNAME}    ${INVALID_PASSWORD}
+    Validate Error Message    ${PASSWORD_ERROR_MESSAGE}
+    Close Browser
+# 10. Teclas presionadas
+Press Escape Key
+    Open Browser    ${URL}    chrome
+    Click Element    id=target
+    Press Keys    id=target    ESCAPE
+    Validate Key Press    ${ESCAPE_MESSAGE}
+    Close Browser
+
+Press Space Key
+    Open Browser    ${URL}    chrome
+    Click Element    id=target
+    Press Keys    id=target    SPACE
+    Validate Key Press    ${SPACE_MESSAGE}
+    Close Browser
